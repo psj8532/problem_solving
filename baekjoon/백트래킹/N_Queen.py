@@ -1,34 +1,55 @@
 #9663 #9:59
 import sys
 sys.stdin = open("N_Queen.text","r")
-#DFS로 탐색하면서
-#가로,세로,대각선에 퀸이 있으면 백
-#for문으로 [0]행의 열들을 확인
-#nextFind를 통해 다음 행에서의 열 찾음
-#check함수를 통해 가로,세로,대각선을 확인하고 안되면 백
-#끝가지 가면 cnt+1
 
-def backTracking(row,b):
-    if row==n:
+def backTrack(row,b):
+    visited_col[b]=1
+    visited_l[matrix_l[row][b]]=1
+    visited_r[matrix_r[row][b]]=1
+    if row == n-1:
         global cnt
         cnt+=1
         return
-    visited[b]=1
     for x in range(n):
-        if not visited[x] and (x<b-1 or x>b+1):
-            b = x
-            backTracking(row+1,b)
-            visited[b]=0
-    return
+        if not visited_col[x] and not visited_l[matrix_l[row+1][x]] and not visited_r[matrix_r[row+1][x]]:
+            backTrack(row+1,x)
+            visited_col[x]=0
+            visited_l[matrix_l[row + 1][x]]=0
+            visited_r[matrix_r[row + 1][x]]=0
+
 n=int(input())
-matrix = [[0]*n for _ in range(n)]
-
 cnt=0
+matrix_l=[[0]*n for _ in range(n)]
+matrix_r=[[0]*n for _ in range(n)]
+temp=3
 for i in range(n):
-    visited = [0] * n
-    backTracking(0,i)
-print(cnt)
+    t=temp+1
+    for j in range(n):
+        t-=1
+        matrix_l[i][j]=t
+    temp+=1
+temp=-2
+for i in range(n):
+    t=temp+1
+    for j in range(n):
+        t+=1
+        matrix_r[i][j]=t
+    temp+=1
 
+for i in range(n // 2):
+    visited_col = [0]*n
+    visited_l = [0]*(2*n)
+    visited_r = [0]*(2*n)
+    backTrack(0,i)
+cnt *= 2
+if n>1 and n&1:
+    visited_col = [0] * n
+    visited_l = [0] * (2 * n)
+    visited_r = [0] * (2 * n)
+    backTrack(0, n // 2)
+elif n==1:
+    cnt+=1
+print(cnt)
 
 
 # #재귀
