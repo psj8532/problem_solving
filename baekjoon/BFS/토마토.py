@@ -1,30 +1,29 @@
-#7576 #15:23 #백트래킹 사용할것
 import sys
 sys.stdin=open("토마토.text","r")
+from collections import deque
 
-def bfs(max_val):
+def bfs():
     global count
-    while queue:
-        here = queue.pop(0)
+    while deq:
+        here = deq.popleft()
         y = here[0]
         x = here[1]
         depth=here[2]
-        if depth>max_val:
-            max_val=depth
+
         for dir in range(len(dy)):
             temp_y = y + dy[dir]
             temp_x = x + dx[dir]
             if 0 <= temp_y < n and 0 <= temp_x <m and not matrix[temp_y][temp_x]:
-                queue.append([temp_y, temp_x, depth + 1])
+                deq.append([temp_y, temp_x, depth + 1])
                 matrix[temp_y][temp_x] = 1
                 count-=1
-    return max_val
+    return depth
 
 dy=[-1,0,1,0]
 dx=[0,1,0,-1]
 m,n=map(int,input().split())
 matrix=[]
-queue=[]
+deq=deque()
 temp=0
 max_val=0
 count=0
@@ -33,25 +32,12 @@ for _ in range(n):
 for i in range(n):
     for j in range(m):
         if matrix[i][j]==1:
-            queue.append([i,j,0])
+            deq.append([i,j,0])
         elif matrix[i][j]==0:
             count+=1
-cnt = bfs(max_val)
+cnt = bfs()
 
 if count>0:
     print(-1)
 else:
     print(cnt)
-
-# for row in matrix:
-#     if not all(row):
-#         temp=-1
-#         break
-
-# for i in range(n):
-#     for j in range(m):
-#         if matrix[i][j]==0:
-#             temp=-1
-#             break
-#     if temp==-1:
-#         break
