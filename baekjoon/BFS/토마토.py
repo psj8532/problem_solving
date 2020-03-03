@@ -14,11 +14,12 @@ def bfs(max_val):
         for dir in range(len(dy)):
             temp_y = y + dy[dir]
             temp_x = x + dx[dir]
-            if 0 <= temp_y < n and 0 <= temp_x <m and matrix[temp_y][temp_x] == 0:
+            if 0 <= temp_y < n and 0 <= temp_x <m and not matrix[temp_y][temp_x]:
                 queue.append([temp_y, temp_x, depth + 1])
                 matrix[temp_y][temp_x] = 1
                 count-=1
     return max_val
+
 dy=[-1,0,1,0]
 dx=[0,1,0,-1]
 m,n=map(int,input().split())
@@ -37,6 +38,11 @@ for i in range(n):
             count+=1
 cnt = bfs(max_val)
 
+if count>0:
+    print(-1)
+else:
+    print(cnt)
+
 # for row in matrix:
 #     if not all(row):
 #         temp=-1
@@ -49,8 +55,3 @@ cnt = bfs(max_val)
 #             break
 #     if temp==-1:
 #         break
-
-if count>0:
-    print(-1)
-else:
-    print(cnt)
