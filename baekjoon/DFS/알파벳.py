@@ -36,7 +36,7 @@ dx=[0,1,0,-1]
 for _ in range(r):
     matrix.append(list(input()))
 visit_list=[0]*26
-max_cnt=0
+max_cn1t=0
 dfs(0,0,0)
 print(max_cnt)
 #20:01

@@ -18,7 +18,7 @@ def bfs(cnt):
 
 dy=[-1,0,1,0]
 dx=[0,1,0,-1]
-n,m,k=map(int,input().split())
+n,m,k=map(int,input().split()) #n:세로길이, m:가로길이, 부분직사각형의 갯수
 data=[]
 queue=[]
 result=[]

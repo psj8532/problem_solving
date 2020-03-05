@@ -8,6 +8,7 @@ def bfs():
         for j in range(c):
             if matrix[i][j]==2:
                 deq.append([i,j])
+                
     while deq:
         here = deq.popleft()
         y,x=here[0],here[1]
@@ -15,7 +16,7 @@ def bfs():
             new_y=y+dy[dir]
             new_x=x+dx[dir]
             if 0<=new_y<r and 0<=new_x<c and not matrix[new_y][new_x]:
-                deq.append([new_y,new_x])
+                deq.appednd([new_y,new_x])
                 matrix[new_y][new_x]=3
 
 
@@ -32,7 +33,7 @@ for _ in range(r):
 for y in range(r):
     for x in range(c):
         if not matrix[y][x]:
-            visited.append([y,x])
+            visited.append([y,x]) #0인 좌표 찾기
 
 n=len(visited)
 for i in range(n-2):
