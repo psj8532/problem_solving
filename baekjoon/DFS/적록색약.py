@@ -1,9 +1,8 @@
 #10026 #13:53
-#적록색약이 아닌 사람이 봤을때는 다른 글자가 나올때까지
-#적록색약인 사람은 R이나 G이면 같은색으로 인식
 import sys
 sys.stdin=open("적록색약.text","r")
 from _collections import deque
+
 def bfs(y,x,t):
     deq=deque()
     visited[y][x]=1
@@ -30,11 +29,13 @@ for i in range(n):
     for j in range(n):
         if not visited[i][j]:
             temp=matrix[i][j]
-            bfs(i,j,temp)
+            bfs(i,j,temp) #(y,x)좌표와 색깔을 함수의 인자로 전달
             cnt+=1
 print(cnt,end=' ')
-visited=[[0]*n for _ in range(n)]
+visited=[[0]*n for _ in range(n)] #visited 재사용 위한 초기화
 cnt=0
+
+#R,G를 같은 문자로 보기 위해 변경
 for i in range(n):
     for j in range(n):
         if matrix[i][j]=='G':
