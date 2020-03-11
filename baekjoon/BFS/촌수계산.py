@@ -1,37 +1,33 @@
 import sys
 sys.stdin = open("촌수계산.text","r")
-from _collections import deque
+from collections import deque
 
-def bfs(pa,ch,depth):
+def bfs(c,p,depth):
     deq=deque()
-    deq.append([pa,depth])
-    visited[pa]=1
+    deq.append([c,depth])
+    visited[c]=1
     while deq:
-        here = deq.popleft()
-        pa,depth=here[0],here[1]
-        if pa==ch:
-            global result
-            result=depth
-            return
+        c,depth = deq.popleft()
+        if c==p:
+            return depth
         for next in range(1,n+1):
-            if 0<=next<n+1 and matrix[pa][next] and not visited[next]:
-                visited[next]=1
+            if matrix[c][next] and not visited[next]:
                 deq.append([next,depth+1])
+                visited[next]=1
 
 n=int(input())
 ans=list(map(int,input().split()))
 m=int(input())
-visited=[0]*(n+1)
 matrix=[[0]*(n+1) for _ in range(n+1)]
-result=-1
 for i in range(m):
-    data=list(map(int,input().split()))
-    parent,child=data[0],data[1]
-    matrix[parent][child]=1
-
-bfs(ans[0],ans[1],0)
-if result==-1:
-    visited = [0] * (n + 1)
-    bfs(ans[1],ans[1],0)
-
+    data_p,data_c=map(int,input().split())
+    matrix[data_c][data_p]=1
+    matrix[data_p][data_c]=1
+visited=[0]*(n+1)
+result=bfs(ans[0],ans[1],0)
+if not result:
+    result=-1
 print(result)
+#촌수에 대한 이해가 부족해서 너무 복잡하게 생각하고 접근함
+#부모든 자식이든 상관없이 depth하나가 촌수하나씩임
+#문제에는 3촌까지만 예시로 나와있어서 3촌까지만 계산하면 되는 줄 알았음
