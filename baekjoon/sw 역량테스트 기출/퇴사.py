@@ -1,7 +1,7 @@
 # 퇴사 # 18:10
 
 import sys
-sys.stdin=open("14501.text","r")
+sys.stdin=open("퇴사.text","r")
 def Schedule(now,n):
     global val, result
     if now < n and now+data[now][0]<=n+1:#다음게 n을 넘어가면 안됨
