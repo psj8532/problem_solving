@@ -1,0 +1,5 @@
+﻿  A+B.c
+C:\Users\세진\Desktop\sejin\problem_solving\baekjoon\Project1\Project1\A+B.c(6,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  welovekriii.c
+  코드를 생성하고 있습니다...
+  Project1.vcxproj -> C:\Users\세진\Desktop\sejin\problem_solving\baekjoon\Project1\x64\Debug\Project1.exe

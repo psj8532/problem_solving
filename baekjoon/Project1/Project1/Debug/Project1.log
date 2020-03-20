@@ -1,0 +1,2 @@
+﻿welovekriii.obj : error LNK2005: _main이(가) A+B.obj에 이미 정의되어 있습니다.
+C:\Users\세진\Desktop\sejin\problem_solving\baekjoon\Project1\Debug\Project1.exe : fatal error LNK1169: 여러 번 정의된 기호가 있습니다.
