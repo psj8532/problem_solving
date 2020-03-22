@@ -1,0 +1,3 @@
+﻿  두수비교하기.c
+C:\Users\세진\Desktop\sejin\problem_solving\baekjoon\c\if\if\두수비교하기.c(6,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  if.vcxproj -> C:\Users\세진\Desktop\sejin\problem_solving\baekjoon\c\if\Debug\if.exe

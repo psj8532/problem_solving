@@ -20,7 +20,6 @@ for _ in range(k):
                         if not matrix[r][c] and data[r-i][c-j]:
                             visited.append((r, c, matrix[r][c]))
                             matrix[r][c]=data[r-i][c-j]
-
                         elif not matrix[r][c] and not data[r-i][c-j]:
                             pass
                         elif matrix[r][c] and not data[r-i][c-j]:
