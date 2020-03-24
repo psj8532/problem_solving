@@ -26,9 +26,11 @@ def move(dir,end,t):
         x+=dx
         visited[y][x]=1
         deq.appendleft([y, x])
+
         if not isExist(y,x):
             ty, tx = deq.pop()
             visited[ty][tx] = 0
+
         if end<len(data) and t==data[end][0]:
             if data[end][1]=='D':
                 dir = direct.index(R[dir])
