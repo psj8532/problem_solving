@@ -9,6 +9,11 @@ def nextFind(h):
     for next in range(1,n+1):
         if matrix[h][next] and not visited[next]:
             return next
+# def nextFind(h):
+#     for next in range(n,0,-1):
+#         if matrix[h][next] and not visited[next]:
+#             stack.append(next)
+
 
 def bfs(here):
     queue=[]
@@ -43,12 +48,27 @@ def dfs(here): #길이 없어 돌아올때 중간지점에서 pop하면 그 지�
             stack.append(here)
 
     print(*result)
-
+# def dfs(here):
+#     visited[here]=1
+#     result.append(here)
+#     nextFind(here)
+#
+#     while stack:
+#         here = stack.pop()
+#         if not visited[here]:
+#             visited[here]=1
+#             result.append(here)
+#             nextFind(here)
+#         elif stack:
+#             here=stack.pop()
+#
+#     print(*result)
 n,m,v=map(int,input().split())
 data=[]
 visited=[0]*(n+1)
 matrix = [[0]*(n+1) for _ in range(n+1)]
 result=[]
+stack=[]
 for _ in range(m):
     data.append(list(map(int,input().split())))
 
