@@ -1,0 +1,4 @@
+﻿  A+B-5.cpp
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\A+B-5.cpp(8,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  구구단.c
+  Project2.vcxproj -> C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\x64\Debug\Project2.exe

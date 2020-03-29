@@ -26,27 +26,6 @@ def check():
             result_min=cd
     return result_min
 
-        # for here in s[idx]:
-        #     cd=0
-        #     isFail=False
-        #     y,x=chicken[here][0],chicken[here][1]
-        #
-        #     for i in range(n):
-        #         for j in range(n):
-        #             if matrix[i][j]==1:
-        #                 d=abs(i-y)+abs(j-x)
-        #                 if cd+d>result_min:
-        #                     cd=0
-        #                     isFail=True
-        #                     break
-        #                 else:
-        #                     cd+=d
-        #         if isFail:
-        #             break
-        #     if isFail:
-        #         break
-        #     else:
-        #         result_min=cd
 def perm(a,k):
     if k==m:
         temp=a[:]
