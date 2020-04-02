@@ -1,4 +1,9 @@
-﻿  A+B-5.cpp
-C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\A+B-5.cpp(8,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  구구단.c
-  Project2.vcxproj -> C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\x64\Debug\Project2.exe
+﻿  최소_최대.cpp
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\최소_최대.cpp(8,26): warning C4305: '초기화 중': '__int64'에서 'int'(으)로 잘립니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\최소_최대.cpp(8,16): warning C4309: '초기화 중': 상수 값이 잘립니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\최소_최대.cpp(11,34): error C2440: '초기화 중': 'void *'에서 'int *'(으)로 변환할 수 없습니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\최소_최대.cpp(11,9): message : 'void*'에서 'void'가 아닌 포인터로 변환하려면 명시적 캐스트가 필요합니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\최소_최대.cpp(5,2): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\최소_최대.cpp(6,2): warning C4996: 'setbuf': This function or variable may be unsafe. Consider using setvbuf instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\최소_최대.cpp(10,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\최소_최대.cpp(14,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.

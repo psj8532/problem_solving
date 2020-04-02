@@ -141,9 +141,11 @@
     <ClCompile Include="A+B-5.cpp" />
     <ClCompile Include="test1.c" />
     <ClCompile Include="구구단.c" />
+    <ClCompile Include="최소_최대.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="test1.txt" />
+    <Text Include="최소_최대.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
