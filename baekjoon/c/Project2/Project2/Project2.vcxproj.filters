@@ -27,12 +27,24 @@
     <ClCompile Include="최소_최대.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="A+B-4.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="최댓값.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="숫자의개수.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="test1.txt">
       <Filter>소스 파일</Filter>
     </Text>
     <Text Include="최소_최대.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="A+B-4.txt">
       <Filter>소스 파일</Filter>
     </Text>
   </ItemGroup>

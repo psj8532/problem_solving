@@ -1,14 +1,14 @@
-#if 1
+#if 0
 #include <stdio.h>
-#include <stdlib.h>
+
 int main(void) {
 	freopen("최소_최대.txt", "r", stdin);
 	setbuf(stdout, NULL);
 	int n;
 	int min_val = 9876543210;
 	int max_val = 0;
+	int s[5];
 	scanf("%d", &n);
-	int *s = malloc(sizeof(int) * n);
 
 	for (int i = 0; i < n; i++) {
 		scanf("%d", &s[i]);
