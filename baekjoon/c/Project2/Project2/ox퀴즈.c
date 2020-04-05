@@ -8,14 +8,8 @@ int main(void) {
 	for (t = 0; t < tc; t++) {
 		char sheet[81];
 		int score[81] = { 0 };
-		i = 0;
-		while (1) {
-			scanf("%c", &sheet[i]);
-			if (sheet[i] == NULL) {
-				break;
-			}
-			i++;
-		}
+		
+		scanf("%s", sheet);
 		i = 0;
 		cnt = 0;
 		grade = 0;
