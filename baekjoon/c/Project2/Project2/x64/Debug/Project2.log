@@ -1,3 +1,7 @@
-﻿  수정렬하기.c
-C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\수정렬하기.c(33,10): warning C4047: 'return': 'int'의 간접 참조 수준이 'int *'과(와) 다릅니다.
+﻿  스택.c
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\스택.c(10,9): warning C4477: 'scanf' : 서식 문자열 '%s'에 'char *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\스택.c(11,19): warning C4047: '==': 'int'의 간접 참조 수준이 'char [5]'과(와) 다릅니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\스택.c(16,23): warning C4047: '==': 'int'의 간접 참조 수준이 'char [4]'과(와) 다릅니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\스택.c(25,24): warning C4047: '==': 'int'의 간접 참조 수준이 'char [5]'과(와) 다릅니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\스택.c(28,25): warning C4047: '==': 'int'의 간접 참조 수준이 'char [6]'과(와) 다릅니다.
   Project2.vcxproj -> C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\x64\Debug\Project2.exe

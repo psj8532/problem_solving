@@ -1,4 +1,4 @@
-#if 1
+#if 0
 #include <stdio.h>
 int selection_sort(int s[], int n);
 int main(void) {

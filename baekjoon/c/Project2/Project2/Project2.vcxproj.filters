@@ -54,6 +54,9 @@
     <ClCompile Include="수정렬하기.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="스택.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="test1.txt">
