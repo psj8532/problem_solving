@@ -45,6 +45,15 @@
     <ClCompile Include="ox퀴즈.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="팩토리얼.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="피보나치수5.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="수정렬하기.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="test1.txt">
