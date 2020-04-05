@@ -36,6 +36,9 @@
     <ClCompile Include="숫자의개수.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="나머지.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="test1.txt">

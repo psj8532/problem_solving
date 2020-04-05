@@ -1,5 +1,2 @@
-﻿  숫자의개수.c
-C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\숫자의개수.c(15,13): warning C4477: 'sprintf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
-C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\숫자의개수.c(15,13): warning C4313: 'sprintf': 서식 문자열의 '%d'이(가) 인수 1('int *' 형식)과(와) 충돌합니다.
-C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\숫자의개수.c(18,19): warning C4047: '==': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+﻿  나머지.c
   Project2.vcxproj -> C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\x64\Debug\Project2.exe

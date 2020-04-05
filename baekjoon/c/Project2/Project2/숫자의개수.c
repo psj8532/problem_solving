@@ -1,19 +1,16 @@
-#if 1
+#if 0
 #include <stdio.h>
-//#define _CRT_SECURE_NO_WARNINGS
 int main(void) {
 	int a, b, c = 0;
-	int sum_val = 0;
+	int val = 0;
 	char s[100];
 	int num[10] = { 0 };
-	int *p;
+	int* p;
 	int i;
 	p = num;
 	scanf("%d %d %d", &a, &b, &c);
-	sum_val = a * b * c;
-	printf("%d\n", sum_val);
-	sprintf(s, "%d", num);
-	printf("%s ", s);
+	val = a * b * c;
+	sprintf(s, "%d", val);
 	for (i = 0; i < 100; i++) {
 		if (s[i] == NULL) {
 			break;
@@ -55,7 +52,7 @@ int main(void) {
 		}
 	}
 	for (i = 0; i < 10; i++) {
-		printf("%s", s);
+		printf("%d\n", p[i]);
 	}
 
 	return 0;
