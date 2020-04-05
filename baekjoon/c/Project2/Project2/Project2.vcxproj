@@ -140,12 +140,14 @@
   <ItemGroup>
     <ClCompile Include="A+B-4.cpp" />
     <ClCompile Include="A+B-5.cpp" />
+    <ClCompile Include="ox퀴즈.c" />
     <ClCompile Include="test1.c" />
     <ClCompile Include="구구단.c" />
     <ClCompile Include="나머지.c" />
     <ClCompile Include="숫자의개수.c" />
     <ClCompile Include="최댓값.cpp" />
     <ClCompile Include="최소_최대.cpp" />
+    <ClCompile Include="평균.c" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="A+B-4.txt" />
