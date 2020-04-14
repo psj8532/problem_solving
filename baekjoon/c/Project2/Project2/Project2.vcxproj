@@ -142,11 +142,13 @@
     <ClCompile Include="A+B-5.cpp" />
     <ClCompile Include="ox퀴즈.c" />
     <ClCompile Include="test1.c" />
+    <ClCompile Include="괄호.c" />
     <ClCompile Include="구구단.c" />
     <ClCompile Include="나머지.c" />
     <ClCompile Include="수정렬하기.c" />
     <ClCompile Include="숫자의개수.c" />
     <ClCompile Include="스택.c" />
+    <ClCompile Include="제로.c" />
     <ClCompile Include="최댓값.cpp" />
     <ClCompile Include="최소_최대.cpp" />
     <ClCompile Include="팩토리얼.c" />
@@ -156,6 +158,7 @@
   <ItemGroup>
     <Text Include="A+B-4.txt" />
     <Text Include="test1.txt" />
+    <Text Include="괄호.txt" />
     <Text Include="최소_최대.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

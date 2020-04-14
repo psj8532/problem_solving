@@ -57,6 +57,12 @@
     <ClCompile Include="스택.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="제로.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="괄호.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="test1.txt">
@@ -66,6 +72,9 @@
       <Filter>소스 파일</Filter>
     </Text>
     <Text Include="A+B-4.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="괄호.txt">
       <Filter>소스 파일</Filter>
     </Text>
   </ItemGroup>
