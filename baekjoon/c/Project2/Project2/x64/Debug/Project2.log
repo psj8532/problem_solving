@@ -1,3 +1,25 @@
-﻿  괄호.c
-C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\괄호.c(18,22): warning C4047: '!=': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+﻿  경사로.c
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\경사로.c(18,12): warning C4047: '=': 'int *'의 간접 참조 수준이 'int (*)[100]'과(와) 다릅니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\경사로.c(36,33): warning C4047: '함수': 'int *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\경사로.c(36,33): warning C4024: 'checkUp': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\경사로.c(36,39): warning C4047: '함수': 'int (*)[100]'의 간접 참조 수준이 'int *'과(와) 다릅니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\경사로.c(36,39): warning C4024: 'checkUp': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\경사로.c(45,21): warning C4047: '함수': 'int *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\경사로.c(45,21): warning C4024: 'checkUp': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\경사로.c(45,26): warning C4047: '함수': 'int (*)[100]'의 간접 참조 수준이 'int *'과(와) 다릅니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\경사로.c(45,26): warning C4024: 'checkUp': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\경사로.c(55,44): warning C4047: '함수': 'int (*)[100]'의 간접 참조 수준이 'int *'과(와) 다릅니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\경사로.c(55,44): warning C4024: 'checkDown': 형식 및 실제 매개 변수 5의 형식이 서로 다릅니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\경사로.c(95,33): warning C4047: '함수': 'int *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\경사로.c(95,33): warning C4024: 'checkUp': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\경사로.c(95,39): warning C4047: '함수': 'int (*)[100]'의 간접 참조 수준이 'int *'과(와) 다릅니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\경사로.c(95,39): warning C4024: 'checkUp': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\경사로.c(104,21): warning C4047: '함수': 'int *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\경사로.c(104,21): warning C4024: 'checkUp': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\경사로.c(104,27): warning C4047: '함수': 'int (*)[100]'의 간접 참조 수준이 'int *'과(와) 다릅니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\경사로.c(104,27): warning C4024: 'checkUp': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\경사로.c(113,44): warning C4047: '함수': 'int (*)[100]'의 간접 참조 수준이 'int *'과(와) 다릅니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\경사로.c(113,44): warning C4024: 'checkDown': 형식 및 실제 매개 변수 5의 형식이 서로 다릅니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\경사로.c(158,19): warning C4047: 'return': 'int'의 간접 참조 수준이 'int *'과(와) 다릅니다.
+C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\Project2\경사로.c(146,1): warning C4047: '초기화 중': 'int'의 간접 참조 수준이 'int *'과(와) 다릅니다.
   Project2.vcxproj -> C:\Users\qq\Desktop\sejin\problem_solving\baekjoon\c\Project2\x64\Debug\Project2.exe
