@@ -50,7 +50,7 @@ while not isfail:
                 if matrix_temp[i][j]!=-1:
                     matrix[i][j] = matrix_temp[i][j]
 print(count)
-
+#인구 이동이 일어날 때마다 count+1 해줬는데 인구이동한 일수를 세는 문제였음
 
 # def bfs(y,x):
 #     deq = deque()
