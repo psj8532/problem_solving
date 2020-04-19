@@ -50,18 +50,6 @@ def bfs(y,x,d):
                 charge += 1
                 return (min_y, min_x, d)
 
-        # if flag and s and temp==d:
-        #     continue
-
-        # if s:
-        #     min_y,min_x,d=s[0][0],s[0][1],s[0][2]
-        #     for i in range(1,len(s)):
-        #         if s[i][0]<min_y:
-        #             min_y,min_x=s[i][0],s[i][1]
-        #         elif s[i][0]==min_y and min_x>s[i][1]:
-        #             min_y,min_x=s[i][0],s[i][1]
-
-
     return False
 
 direct=[(-1,0),(0,1),(1,0),(0,-1)]
