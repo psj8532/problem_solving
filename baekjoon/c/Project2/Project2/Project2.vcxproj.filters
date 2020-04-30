@@ -66,6 +66,9 @@
     <ClCompile Include="경사로.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="감시.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="test1.txt">
@@ -81,6 +84,9 @@
       <Filter>소스 파일</Filter>
     </Text>
     <Text Include="경사로.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="감시.txt">
       <Filter>소스 파일</Filter>
     </Text>
   </ItemGroup>
