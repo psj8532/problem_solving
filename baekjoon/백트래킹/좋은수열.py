@@ -1,45 +1,45 @@
-#2661 #16:14
-# import sys
-# sys.stdin=open("좋은수열.text","r")
+import sys
+sys.stdin=open("좋은수열.txt","r")
 
-def arrNum(number):
-    temp=number
-    count=0
-    while temp:
-        temp//=10
-        count+=1
-    temp=number
-    num_list=[0]*count
-    for i in range(count-1,-1,-1):
-        num_list[i]=temp%10
-        temp//=10
-    return num_list
+def dfs(index, prev, result):
+    global isEnd
+    if index==N:
+        print(''.join(map(str, result)))
+        isEnd = True
+        return
+    for i in range(1,4):
+        if i==prev: continue
+        else:
+            result.append(i)
+            if index==0 or index==1:
+                dfs(index+1,i,result)
+                if isEnd:
+                    return
+            else:
 
-def getSome(arr):
-    c=len(arr)
-    for i in range(1,c-1):
-        for j in range(c-i+1):
-            for x in range(j,j+i):
-                if arr[x]==arr[x+1]:
-                    return False
-    return True
+                for j in range(2,len(result)):
+                    isFail = False
+                    for idx in range(len(result)-j):
+                        if result[idx:idx+j]==result[idx+1:idx+j+1]:
+                            isFail=True
+                            break
+                    if isFail:
+                        break
+                    isFail=False
+                    if len(result)>=(2*j):
+                        for idx in range(len(result)-j):
+                            if result[idx:idx+j]==result[idx+j:idx+2*j]:
+                                isFail=True
+                                break
+                    if isFail:
+                        break
+                else:
+                    dfs(index + 1, i, result)
+                    if isEnd:
+                        return
+            result.pop()
 
-def perm(col,val):
-    if col==n:
-        global min_val
-        if min_val>val:
-            min_val=val
-    else:
-        for next_num in range(1,4):
-            a=arrNum(val*10+next_num)
-            if getSome(a):
-                perm(col+1,val*10+next_num)
-
-
-n=int(input())
-min_val=987654321
-for num in range(1,4):
-    a=arrNum(num)
-    if getSome(a):
-        perm(1,num)
-print(min_val)
+N = int(input())
+result = []
+isEnd = False
+dfs(0,0,result)
