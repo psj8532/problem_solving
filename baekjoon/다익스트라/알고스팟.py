@@ -54,6 +54,8 @@ print(dist[N-1][M-1])
 # print(dist[N-1][M-1])
 # print('time: {}'.format(time.time()-stime))
 
+
+
 #기존의 코드는 최소 값이 있는 곳의 좌표를 찾는라 매번 2차원 리스트 전부를 돌아야한다.
 #하지만 deq을 사용함으로써 어펜드 팝만 하면 되므로 시간을 단축할 수 있다.
 
