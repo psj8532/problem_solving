@@ -1,6 +1,3 @@
-import sys
-sys.stdin=open("드래곤커브.txt","r")
-
 def count(cnt):
     for i in range(100):
         for j in range(100):

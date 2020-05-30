@@ -1,7 +1,3 @@
-#14499
-import sys
-sys.stdin=open("주사위굴리기.txt","r")
-
 def rangeCheck(new_y,new_x,d):
     if d==1:
         new_x+=1

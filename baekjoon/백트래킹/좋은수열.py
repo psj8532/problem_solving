@@ -1,6 +1,3 @@
-import sys
-sys.stdin=open("좋은수열.txt","r")
-
 def dfs(index, prev, result):
     global isEnd
     if index==N:

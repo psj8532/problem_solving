@@ -1,5 +1,3 @@
-import sys
-sys.stdin = open("캐슬디펜스.txt","r")
 from _collections import deque
 
 def find_enemy():

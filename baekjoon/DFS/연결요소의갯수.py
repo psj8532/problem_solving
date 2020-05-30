@@ -1,7 +1,3 @@
-#11724 #14:41
-import sys
-sys.stdin = open("연결요소의갯수.text")
-
 def nextfind(start):
     for next in range(n+1):
         if matrix[start][next] and not visited[next]:

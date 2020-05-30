@@ -1,6 +1,3 @@
-import sys
-sys.stdin = open("연산자끼워넣기.txt","r")
-
 def perm(a,k):
     if k==n-1:
         temp = a[:]

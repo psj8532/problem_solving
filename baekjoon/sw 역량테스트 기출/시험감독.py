@@ -1,6 +1,3 @@
-import sys
-sys.stdin=open("시험감독.text","r")
-
 n=int(input())
 data=list(map(int,input().split()))
 b,c=map(int,input().split())

@@ -1,5 +1,3 @@
-import sys
-sys.stdin=open("보물섬.txt","r")
 from _collections import deque
 
 def bfs(y,x,d):

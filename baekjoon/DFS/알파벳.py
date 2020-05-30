@@ -5,9 +5,6 @@
 #r:세로,c:가로
 #비지티드 2차원, 매트릭스 2차원
 #max값 비교
-
-import sys
-sys.stdin = open("알파벳.text","r")
 # DFS
 def dfs(y,x,cnt):
     isEnd=False
@@ -39,4 +36,3 @@ visit_list=[0]*26
 max_cn1t=0
 dfs(0,0,0)
 print(max_cnt)
-#20:01

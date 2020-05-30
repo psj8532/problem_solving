@@ -1,7 +1,3 @@
-#11403 #13:27
-import sys
-sys.stdin=open("경로찾기.text","r")
-
 #matrix에 경로 정보 받음
 #i에서 j까지의 경로(반대의 경우는 생각안해도됨
 #이중 for문으로 그 자리에 있는 i(=start)와 j(=stop) 값을 받아와서 경로 있는지 탐색
@@ -42,4 +38,3 @@ for y in range(n):
 
 for row in data:
     print(*row)
-#14:24

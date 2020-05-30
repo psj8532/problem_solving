@@ -1,5 +1,3 @@
-import sys
-sys.stdin = open("촌수계산.text","r")
 from collections import deque
 
 def bfs(c,p,depth):

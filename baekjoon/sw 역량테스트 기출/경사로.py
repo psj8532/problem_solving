@@ -1,6 +1,3 @@
-import sys
-sys.stdin = open("경사로.txt","r")
-
 def check_up(y,x):
     if x-L==0:
         return True

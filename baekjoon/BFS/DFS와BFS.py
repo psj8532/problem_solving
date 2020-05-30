@@ -1,6 +1,4 @@
 #1260 #13:57
-import sys
-sys.stdin = open("DFS와BFS.text","r")
 from _collections import deque
 #DFS에 관한 함수 정의(Stack 이용)
 #BFS에 관한 함수 정의(Queue 이용)

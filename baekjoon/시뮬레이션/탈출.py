@@ -1,5 +1,3 @@
-import sys
-sys.stdin = open("탈출.txt", "r")
 from _collections import deque
 
 def bfs(sy,sx,d,water):

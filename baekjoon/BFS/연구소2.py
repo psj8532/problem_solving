@@ -1,5 +1,3 @@
-import sys
-sys.stdin=open("연구소2.txt","r")
 from _collections import deque
 
 def bfs():

@@ -1,7 +1,3 @@
-#10:50
-import sys
-sys.stdin=open("톱니바퀴.text","r")
-
 def rotate(idx,d):
     if rot[idx]:
         if d==1:

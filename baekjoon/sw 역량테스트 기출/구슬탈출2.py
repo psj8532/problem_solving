@@ -1,5 +1,3 @@
-import sys
-sys.stdin = open("구슬탈출2.txt","r")
 from _collections import deque
 # 한킨씩 이동하는게 아니라 쭉 굴리는 것이다
 # 구슬이 한 칸에 같이 있을 수 없다

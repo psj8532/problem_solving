@@ -1,7 +1,3 @@
-#1012 #14:43
-import sys
-sys.stdin=open("유기농배추.text","r")
-
 #(가로, 세로, 배추위치를 담은 k줄)
 #배추위치를 담은 정보를 data리스트에 저장
 #data에 담겨있는 정보를 matrix에 표현
@@ -59,4 +55,3 @@ for tc in range(1,t+1):
                 Dfs(i,j)
                 cnt+=1
     print(cnt)
-#16:02

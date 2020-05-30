@@ -1,6 +1,3 @@
-import sys
-sys.stdin = open("사다리조작.txt","r")
-
 def check():
     for c in range(0,2*N-1,2):
         visited = [[0] * (2 * N - 1) for _ in range(H + 2)]

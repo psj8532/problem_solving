@@ -1,7 +1,3 @@
-#17:45
-import sys
-sys.stdin=open("N과M_3.text","r")
-
 def perm(a,k,N):
     if k==m:
         print(*a)
@@ -14,4 +10,3 @@ n, m = map(int,input().split())
 a=[0]*m
 c=list(range(1,n+1))
 perm(a,0,n)
-#18:09

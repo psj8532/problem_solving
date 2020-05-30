@@ -1,6 +1,3 @@
-import sys
-sys.stdin=open("치킨배달.txt","r")
-
 def check():
     result_min=9876543210
     for idx in range(len(s)):

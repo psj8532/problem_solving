@@ -1,6 +1,3 @@
-import sys
-sys.stdin=open("로봇청소기.txt","r")
-
 def nextFind(r,c,D):
     global cnt
     for _ in range(4):

@@ -1,6 +1,3 @@
-#10026 #13:53
-import sys
-sys.stdin=open("적록색약.text","r")
 from _collections import deque
 
 def bfs(y,x,t):
@@ -47,4 +44,3 @@ for i in range(n):
             bfs(i,j,temp)
             cnt+=1
 print(cnt)
-#16:00

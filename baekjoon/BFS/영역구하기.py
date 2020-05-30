@@ -1,7 +1,4 @@
 #2583 #20:42
-import sys
-sys.stdin=open("영역구하기.text","r")
-
 def bfs(cnt):
     cnt+=1
     while queue:

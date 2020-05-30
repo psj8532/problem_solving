@@ -3,9 +3,6 @@
 #result에 문자열 저장
 #문자들을 추가
 #다섯번 이동 #여섯자리 만들어지면 result리스에 있는지 확인
-import sys
-sys.stdin = open("숫자판점프.text","r")
-
 def dfs(y,x,depth,word):
     depth+=1
     word+=matrix[y][x]

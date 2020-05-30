@@ -1,9 +1,6 @@
 #7569 #22:47
 #3중 for문 돌려서 0의 갯수 세고, 마지막에 cnt가 0보다 크면 다 익지 못하는 상황임
 #dx,dy,dz
-
-import sys
-sys.stdin=open("토마토_2.text","r")
 from collections import deque
 
 def bfs():

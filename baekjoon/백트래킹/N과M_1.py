@@ -1,7 +1,3 @@
-#19:00
-import sys
-sys.stdin=open("N과M_1.text","r")
-
 def perm(a,k,N):
     if k==m:
         print(*a)

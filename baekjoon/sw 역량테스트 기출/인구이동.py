@@ -1,5 +1,3 @@
-import sys
-sys.stdin=open("인구이동.txt")
 from collections import deque
 
 def bfs(y,x):

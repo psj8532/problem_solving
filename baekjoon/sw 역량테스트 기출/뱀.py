@@ -1,7 +1,5 @@
-#3190 #22:25
-import sys
-sys.stdin=open("뱀.text","r")
 from collections import deque
+
 def isExist(new_y,new_x):
     if matrix[new_y][new_x]:
         matrix[new_y][new_x]=0

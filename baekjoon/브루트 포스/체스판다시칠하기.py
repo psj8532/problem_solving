@@ -1,7 +1,4 @@
 #08:02
-import sys
-sys.stdin=open("체스판다시칠하기.text","r")
-
 def change(i,j,c):
     cnt=0
     for y in range(i,i+8,2):

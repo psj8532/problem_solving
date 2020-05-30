@@ -1,7 +1,3 @@
-#17144
-import sys
-sys.stdin=open("미세먼지안녕.txt","r")
-
 def move():
     for y in range(r):
         for x in range(c):

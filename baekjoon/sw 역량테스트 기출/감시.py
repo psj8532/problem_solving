@@ -1,6 +1,3 @@
-import sys
-sys.stdin = open("감시.txt","r")
-
 def count(c,matrix_temp): #리스트를 여러곳에서 쓸거면 인자로 넘길것
     for i in range(N):
         for j in range(M):

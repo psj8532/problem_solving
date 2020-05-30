@@ -1,7 +1,4 @@
 #1268 #19:42
-import sys
-sys.stdin=open("임시반장정하기.text","r")
-
 n=int(input())
 data=[]
 for _ in range(n):

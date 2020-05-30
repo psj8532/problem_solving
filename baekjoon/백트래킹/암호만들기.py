@@ -2,9 +2,6 @@
 #L:자릿수,C:문자의 종류
 #in_perm 리스트의 크기는 C, #아스키코드-97
 #리스트에 있는 알파벳들
-import sys
-sys.stdin=open("암호만들기.text","r")
-
 def perm(a,k):
     if k==L:
         vowel_cnt=0

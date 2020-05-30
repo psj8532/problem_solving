@@ -1,5 +1,3 @@
-import sys
-sys.stdin = open("아기상어.txt","r")
 from _collections import deque
 
 def select(s):

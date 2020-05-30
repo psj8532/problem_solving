@@ -1,7 +1,4 @@
 #2178 #17:33
-import sys
-sys.stdin = open("미로탐색.text","r")
-
 def bfs(y,x):
     queue=[]
     a=1
