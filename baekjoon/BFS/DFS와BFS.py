@@ -1,9 +1,7 @@
 #1260 #13:57
 from _collections import deque
-#DFS에 관한 함수 정의(Stack 이용)
-#BFS에 관한 함수 정의(Queue 이용)
-#n:정점의 갯수, m:간선의 갯수, v:탐색을 시작할 정점의 번호
-#이 문제는 stack을 이용할 때 덱보다 리스트를 사용하는 것이 시간이 더 빠름
+
+
 def bfs(here):
     queue=[]
     queue.append(here)
