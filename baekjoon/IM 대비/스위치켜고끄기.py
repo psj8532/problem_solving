@@ -1,6 +1,6 @@
 # 스위치 켜고 끄기 # 22:52
 import sys
-sys.stdin = open("1244.text","r")
+sys.stdin = open("스위치켜고끄기.txt","r")
 
 switch = int(input()) #스위치 갯수
 light = list(map(int,input().split())) #조명의 처음 상태

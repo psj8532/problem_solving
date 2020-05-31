@@ -1,7 +1,4 @@
 # 수열 # 13:20
-import sys
-sys.stdin=open("2491.text","r")
-
 n=int(input()) #수열의 길이
 num_str = list(map(int,input().split()))
 count = 1

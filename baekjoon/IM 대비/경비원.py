@@ -1,7 +1,4 @@
 # 경비원    # 14:09
-import sys
-sys.stdin = open('2564.txt','r')
-
 w, h = map(int,input().split())
 num = int(input())
 data_y = []

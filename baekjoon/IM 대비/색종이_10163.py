@@ -1,7 +1,4 @@
 # 색종이    #16:59
-import sys
-sys.stdin = open("10163.text","r")
-
 matrix = [[0]*101 for _ in range(101)]
 
 n = int(input())

@@ -1,7 +1,4 @@
 # 방 배정   # 11 : 33
-import sys
-sys.stdin = open("13300.text","r")
-
 n, k = map(int,input().split())
 
 student = [[0]*2 for i in range(7)]

@@ -1,7 +1,4 @@
 #자리배정   #18:45
-import sys
-sys.stdin = open("10157.text","r")
-
 def Doturn(y, x, w, h):
     if y<0 or y>=h or x<0 or x>=w or matrix[y][x] != 0:
         return True

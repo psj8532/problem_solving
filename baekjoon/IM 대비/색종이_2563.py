@@ -1,7 +1,4 @@
 # 색종이 # 20:58
-import sys
-sys.stdin = open("2563.text","r")
-
 graph = [[0]*100 for _ in range(100)]
 num = int(input())
 for idx in range(num):

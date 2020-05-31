@@ -1,7 +1,4 @@
 # 수 이어가기 # 21:45
-import sys
-sys.stdin = open("2635.text","r")
-
 n = int(input())
 number = []  #갯수 저장용 리스트
 

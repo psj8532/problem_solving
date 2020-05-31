@@ -1,6 +1,6 @@
 #개미   #17:28
 import sys
-sys.stdin = open("10158.text","r")
+sys.stdin = open("개미.txt","r")
 
 # def DoTurn(y,x,w,h):
 #     if y == 0 or y == h or x == 0 or x == w:

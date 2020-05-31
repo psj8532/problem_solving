@@ -2,10 +2,6 @@
 
 # (a,f),(b,d),(c,e) 쌍
 # a b c d e f 들어오는 순서
-
-import sys
-sys.stdin = open("2116.text","r")
-
 n = int(input())
 dice_list=[] # n개의 주사위
 for i in range(n): # n개의 주사위를 2차원 리스트에 저장

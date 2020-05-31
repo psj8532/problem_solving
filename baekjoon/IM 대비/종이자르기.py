@@ -1,7 +1,4 @@
 # 종이 자르기 # 16:43
-import sys
-sys.stdin=open("2628.text","r")
-
 #이중 for문으로 범위를 이용하여 면적 계산후 리스트에 저장, 그 중 큰 값을 뽑아냄
 w,h = map(int,input().split())
 cut = int(input())

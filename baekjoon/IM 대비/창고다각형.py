@@ -1,7 +1,4 @@
 #창고 다각형 # 20:09
-import sys
-sys.stdin = open("2304.text","r")
-
 column=int(input())
 
 

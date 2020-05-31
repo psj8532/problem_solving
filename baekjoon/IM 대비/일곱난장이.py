@@ -1,7 +1,4 @@
 # 일곱 난장이 # 20:30
-import sys
-sys.stdin = open("2309.text","r")
-
 # def bubble_sorting(a):
 #     n = len(a)
 #     for i in range(n-1,0,-1):

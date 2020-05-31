@@ -1,7 +1,4 @@
 # 줄 세우기 # 11:32
-import sys
-sys.stdin = open("2605.text","r")
-
 n = int(input())
 
 data = list(map(int,input().split()))

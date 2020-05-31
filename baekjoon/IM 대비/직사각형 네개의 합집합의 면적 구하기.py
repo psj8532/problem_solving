@@ -1,8 +1,4 @@
 #직사각형 네개의 합집합의 면적 구하기 #21:25
-import sys
-sys.stdin = open("2669.text","r")
-
-
 graph = [[0]*100 for _ in range(100)]
 
 count = 0

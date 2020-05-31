@@ -1,6 +1,6 @@
 # 직사각형 # 20:40
 import sys
-sys.stdin = open("2527.text","r")
+sys.stdin = open("직사각형.txt","r")
 
 for test_case in range(1,5):
     data = list(map(int,input().split()))
