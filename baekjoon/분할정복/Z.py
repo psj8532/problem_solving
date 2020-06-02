@@ -4,31 +4,27 @@ import time
 
 stime = time.time()
 
-def div(sy,ey,sx,ex,n):
-    global cnt, flag
+def div(sy,sx,n):
+    global cnt,flag
     if n == 2:
-        for i in range(sy,ey):
-            for j in range(sx,ex):
+        for i in range(sy,sy+n):
+            for j in range(sx,sx+n):
                 if (i,j) == (r,c):
                     flag = True
                     return
                 cnt += 1
-        return
-    mid = n>>1
-    div(sy, sy + mid, sx, sx + mid, mid)
-    if flag: return
-    div(sy, sy + mid, sx + mid, ex, mid)
-    if flag: return
-    div(sy + mid, ey, sx, sx + mid, mid)
-    if flag: return
-    div(sy + mid, ey, sx + mid, ex, mid)
-
+    else:
+        mid = n >> 1
+        for i in range(2):
+            for j in range(2):
+                div(sy+mid*i, sx+mid*j, mid)
+                if flag: return
 
 N,r,c = map(int,input().split())
 s = 2**N
 cnt = 0
 flag = False
-div(0,s,0,s,s)
+div(0,0,s)
 print(cnt)
 print('time: {}'.format(time.time()-stime))
 
