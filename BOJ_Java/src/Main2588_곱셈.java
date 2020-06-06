@@ -21,6 +21,7 @@ public class Main2588_곱셈 {
 		for (int j=0; j<result.length; j++) {
 			System.out.println(result[j]);
 		}
+		sc.close();
 	}
 
 }
