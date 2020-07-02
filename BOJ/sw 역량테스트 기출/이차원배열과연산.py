@@ -7,7 +7,8 @@ def check():
         return False
 
 def my_sort(isCheck,y,x):
-    for i in range(R):
+    max = 0
+    for i in range(y):
         a = []
         m = max(matrix[i])
         counting = dict()
@@ -15,26 +16,34 @@ def my_sort(isCheck,y,x):
         for j in range(y):
             c[matrix[i][j]] += 1
         cnt = max(c)
-        idx = c.index(x)
-        if not cnt: continue
+        idx = c.index(cnt)
+        if not cnt or not idx: continue
         if not counting[cnt]:
             counting[cnt] = idx
         else:
             counting[cnt] += idx
-        while counting:
+        cnt = 0
+        while counting and cnt < 100:
             key_min = min(counting.keys())
             a.append(counting[key_min])
             a.append(key_min)
             temp = a[:]
             newMatrix.append(temp)
             del counting[key_min]
+            cnt += 2
+        if cnt > max:
+            max = cnt
+
+    for i in range(y):
+        
 
 r,c,k = map(int,input())
 matrix = [list(map(int,input().split())) for _ in range(3)]
 time = 0
-R = C = 3
 while time < 100:
     newMatrix = []
+    R = len(matrix)
+    C = len(matrix[0])
     if check():
         print(time)
     else:
@@ -43,4 +52,5 @@ while time < 100:
         else:
             my_sort(2,C,R) # 열
 
-    time += 1
+        time += 1
+
