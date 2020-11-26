@@ -30,7 +30,7 @@ t = 0
 while t < 1000:
     t += 1
     # 현재 존재하는 모든 상어 순회
-    tsmells = copy.deepcopy(smells)
+    # tsmells = copy.deepcopy(smells)
     ts = copy.deepcopy(Ss)
     tcur = dict()
     for here,lst in cur.items():
@@ -53,32 +53,35 @@ while t < 1000:
 
                 # 번호가 높은 상어는 어차피 나중에 밀리므로 지금 후보에 넣지 않음
                 if idx < old_idx:
-                    ts[(ny,nx)] = [idx,nd] # 상어의 방향
-                    tsmells[(ny,nx)] = [idx,K] # 상어의 냄새
+                    # ts[(ny,nx)] = [idx,nd] # 상어의 방향
+                    # tsmells[(ny,nx)] = [idx,K] # 상어의 냄새
                     tcur[(ny,nx)] = [idx,nd]
             else:
-                ts[(ny,nx)] = [idx,nd]
-                tsmells[(ny,nx)] = [idx,K]
+                # ts[(ny,nx)] = [idx,nd]
+                # tsmells[(ny,nx)] = [idx,K]
                 tcur[(ny, nx)] = [idx, nd]
         elif smell:
             ny,nx,nd = smell[0]
             # 어차피 냄새가 있으면 다른 상어는 못옴
-            ts[(ny,nx)] = [idx,nd]
-            tsmells[(ny,nx)] = [idx,K]
+            # ts[(ny,nx)] = [idx,nd]
+            # tsmells[(ny,nx)] = [idx,K]
             tcur[(ny, nx)] = [idx, nd]
 
     # 이동하기 전에 있던 좌표에 있는 냄새 -1
     for k in smells.keys():
         if smells[k][1] > 1:
             smells[k][1] -= 1
-            tsmells[k] = [smells[k][0],smells[k][1]]
-        elif tsmells[k][1] > 1:
-            pass
+            smells[k] = [smells[k][0],smells[k][1]]
+        # elif tsmells[k][1] > 1:
+        #     pass
         else:
-            tsmells[k] = [0,0]
+            smells[k] = [0,0]
             ts[k] = [0,0]
+    for k in tcur.keys():
+        smells[k] = [tcur[k][0],K]
+        ts
     Ss = copy.deepcopy(ts)
-    smells = copy.deepcopy(tsmells)
+    # smells = copy.deepcopy(tsmells)
     cur = copy.deepcopy(tcur)
     isEnd = True
     for k in cur.keys():
