@@ -17,21 +17,18 @@ for i in range(1,M+1):
     shark_d[i] = sd
 
 # 상어가 있는 좌표 받아옴
-Ss = dict()
+cur = dict()
 for i in range(N):
     for j in range(N):
         smells[(i, j)] = [0,0]
         if matrix[i][j]:
             smells[(i, j)] = [matrix[i][j],K]
-            Ss[(i,j)] = [matrix[i][j],shark_fd[matrix[i][j]-1]-1] # 상어가 여러마리일 떄, 잠깐 저장하기 위해 리스트로 만듬 # 번호, 방향
-cur = copy.deepcopy(Ss)
+            cur[(i,j)] = [matrix[i][j],shark_fd[matrix[i][j]-1]-1] # 상어가 여러마리일 떄, 잠깐 저장하기 위해 리스트로 만듬 # 번호, 방향
 # 1번 상어만 남았는지 체크 or 1000초가 지났는지 확인
 t = 0
 while t < 1000:
     t += 1
     # 현재 존재하는 모든 상어 순회
-    # tsmells = copy.deepcopy(smells)
-    ts = copy.deepcopy(Ss)
     tcur = dict()
     for here,lst in cur.items():
         y,x = here
@@ -47,24 +44,16 @@ while t < 1000:
                 smell.append((ny,nx,dir))
         if non_smell:
             ny,nx,nd = non_smell[0]
-            # if tsmells[(ny,nx)][0] == 0:
             if (ny, nx) in tcur and tcur[(ny, nx)][0] != 0:
                 old_idx = tcur[(ny,nx)][0]
-
                 # 번호가 높은 상어는 어차피 나중에 밀리므로 지금 후보에 넣지 않음
                 if idx < old_idx:
-                    # ts[(ny,nx)] = [idx,nd] # 상어의 방향
-                    # tsmells[(ny,nx)] = [idx,K] # 상어의 냄새
                     tcur[(ny,nx)] = [idx,nd]
             else:
-                # ts[(ny,nx)] = [idx,nd]
-                # tsmells[(ny,nx)] = [idx,K]
                 tcur[(ny, nx)] = [idx, nd]
         elif smell:
             ny,nx,nd = smell[0]
             # 어차피 냄새가 있으면 다른 상어는 못옴
-            # ts[(ny,nx)] = [idx,nd]
-            # tsmells[(ny,nx)] = [idx,K]
             tcur[(ny, nx)] = [idx, nd]
 
     # 이동하기 전에 있던 좌표에 있는 냄새 -1
@@ -72,16 +61,10 @@ while t < 1000:
         if smells[k][1] > 1:
             smells[k][1] -= 1
             smells[k] = [smells[k][0],smells[k][1]]
-        # elif tsmells[k][1] > 1:
-        #     pass
         else:
             smells[k] = [0,0]
-            ts[k] = [0,0]
     for k in tcur.keys():
         smells[k] = [tcur[k][0],K]
-        ts
-    Ss = copy.deepcopy(ts)
-    # smells = copy.deepcopy(tsmells)
     cur = copy.deepcopy(tcur)
     isEnd = True
     for k in cur.keys():
