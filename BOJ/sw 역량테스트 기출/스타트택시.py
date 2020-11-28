@@ -1,135 +1,112 @@
-from collections import deque
+from _collections import deque
 
-def start_bfs(sy,sx,d):
-    deq = deque()
-    if (sy,sx) in start and (sy,sx) == start[(sy,sx)]:
-        Cs.append([sy,sx,d])
+def find_customer(y,x,d):
+    if customers.get((y,x)) is not None and c_visited[y][x]:
+        Cs.append([y,x,d])
         return
-    deq.append([sy,sx,d])
-    visited[sy][sx] = True
+    deq = deque()
+    deq.append([y,x,d])
+    visited[y][x] = True
 
     while deq:
         y,x,d = deq.popleft()
         for dir in range(4):
             ny, nx = y + direct[dir][0], x + direct[dir][1]
-            if 0 <= ny < N and 0 <= nx < N and not visited[ny][nx] and not matrix[ny][nx] and start.get((ny,nx)) is not None: # 도착 지점 정보 못찾겠음
-                Cs.append([ny , nx, d + 1])
+            if 0 <= ny < N and 0 <= nx < N and not matrix[ny][nx] and not visited[ny][nx] and c_visited[ny][nx]:
+                Cs.append([ny,nx,d+1])
+                deq.append([ny,nx,d+1])
+                visited[ny][nx] = True
+            elif 0 <= ny < N and 0 <= nx < N and not matrix[ny][nx] and not visited[ny][nx]:
                 deq.append([ny, nx, d + 1])
                 visited[ny][nx] = True
-            elif 0 <= ny < N and 0 <= nx < N and not visited[ny][nx] and not matrix[ny][nx]:
-                deq.append([ny, nx, d + 1])
-                visited[ny][nx] = True
 
 
-# def dest_bfs(lst):
-#     y,x,fuel,idx = lst
-#     print('목적지로 출발 전',y,x)
-#     print('연료',fuel)
-#     if end[y][x] == idx and fuel <= tank:
-#         dest.append(y)
-#         dest.append(x)
-#         return 0
-#     deq=deque()
-#     deq.append([y,x,0])
-#     visited[y][x] = True
-#
-#     while deq:
-#         y,x,d = deq.popleft()
-#         for dir in range(4):
-#             ny, nx = y + direct[dir][0], x + direct[dir][1]
-#             if 0 <= ny < N and 0 <= nx < N and not visited[ny][nx] and end[ny][nx] == idx and fuel+d+1 <= tank:
-#                 dest.append(ny)
-#                 dest.append(nx)
-#                 print('도착',ny,nx,d+1)
-#                 return d+1
-#             elif 0 <= ny < N and 0 <= nx < N and not visited[ny][nx] and end[ny][nx] != 1 and fuel+d+1 <= tank:
-#                 deq.append([ny, nx, d + 1])
-#                 visited[ny][nx] = True
-#     return -1
-
-def dest_bfs(lst):
-    sy,sx,fuel,idx = lst
-    print('목적지로 출발 전',sy,sx)
-    print('연료',fuel)
-    if (sy,sx) in start and (sy,sx) == start[(sy,sx)] and fuel <= tank:
-        dest.append(sy)
-        dest.append(sx)
+def move(lst):
+    y,x,fuel = lst
+    ey,ex = customers[(y,x)]
+    if (y,x) == (ey,ex):
+        dest.append(y)
+        dest.append(x)
         return 0
-    deq=deque()
-    deq.append([sy,sx,0])
-    visited[sy][sx] = True
+    deq = deque()
+    deq.append([y,x,0])
+    visited[y][x] = True
 
     while deq:
         y,x,d = deq.popleft()
         for dir in range(4):
             ny, nx = y + direct[dir][0], x + direct[dir][1]
-            if 0 <= ny < N and 0 <= nx < N and not visited[ny][nx] and not matrix[ny][nx] and (sy,sx) in start and (ny,nx) == start[(sy,sx)] and fuel+d+1 <= tank:
+            if 0 <= ny < N and 0 <= nx < N and not matrix[ny][nx] and not visited[ny][nx] and (ny,nx) == (ey,ex) and fuel+d+1 <= tank:
                 dest.append(ny)
                 dest.append(nx)
-                print('도착',ny,nx,d+1)
                 return d+1
-            elif 0 <= ny < N and 0 <= nx < N and not visited[ny][nx] and not matrix[ny][nx] and fuel+d+1 <= tank:
-                deq.append([ny, nx, d + 1])
+            elif 0 <= ny < N and 0 <= nx < N and not matrix[ny][nx] and not visited[ny][nx] and fuel+d+1 <= tank:
+                deq.append([ny,nx,d+1])
                 visited[ny][nx] = True
+
     return -1
 
+def check():
+    cnt = 0
+    for i in range(N):
+        for j in range(N):
+            if c_visited[i][j]:
+                cnt += 1
+    if cnt > 0: # 아직 남아있는 손님이 있다면
+        return False
+    else:
+        return True
+
+
+answer = -1
 direct = [(-1,0),(0,1),(1,0),(0,-1)]
 N,M,tank = map(int,input().split())
 matrix = [list(map(int,input().split())) for _ in range(N)]
-# end = [[0]*N for _ in range(N)]
-
 sy,sx = map(int,input().split())
 sy,sx = sy-1,sx-1
-customer = {}
-start = {}
-for i in range(2,M+2):
+c_visited = [[False]*N for _ in range(N)] # 손님이 있으면 True
+customers = {}
+for i in range(M):
     t = list(map(int,input().split()))
-    ts,te = t[:2],t[2:]
-    ts[0], ts[1] = ts[0] - 1, ts[1] - 1
-    te[0], te[1] = te[0] - 1, te[1] - 1
-    start[(ts[0],ts[1])] = (te[0],te[1])
-    customer[(ts[0],ts[1])] = False
+    for j in range(4):
+        t[j] -= 1
+    ts, te = t[:2], t[2:]
+    customers[(ts[0],ts[1])] = (te[0],te[1])
+    c_visited[ts[0]][ts[1]] = True
 
 isEnd = False
 while not isEnd:
     isEnd = True
     Cs = []
-    visited = [[False] * N for _ in range(N)]
-    print('전체연료', tank)
-    print('출발 위치',sy,sx)
-    start_bfs(sy,sx,0)
-
-    # 가까운 후보 추려내기
-    if not Cs:
-        fl = -1
-        break
-    c = min(Cs, key=lambda x: (x[2],x[0],x[1]))
-    print('탑승 위치', c)
-
-    # 목적지 찾기
-    dest = []
     visited = [[False]*N for _ in range(N)]
-    fl = dest_bfs(c)
-    print('이동거리', fl)
-    print('목적지', dest)
+
+    find_customer(sy,sx,0)
+    # 손님 후보 뽑기
+    if not Cs:
+        answer = -1
+        break
+    c = min(Cs, key=lambda x:(x[2],x[0],x[1]))
+    # 손님 태우고 출발
+    # print('출발',c[0],c[1],'거리',c[2])
+    dest = []
+    visited = [[False] * N for _ in range(N)]
+    fl = move(c)
+    # print('도착',*dest)
     if fl == -1:
-        isEnd = True
+        answer = -1
         break
     else:
+        tank = tank - c[2] + fl
+        # print('남은 연료: ', tank)
         sy,sx = dest
-        tank = tank - c[2] - fl + fl * 2
-        print('남은 연료', tank)
-        print('-----')
-        customer[(c[0],c[1])] = True
+        c_visited[c[0]][c[1]] = False
 
-    for k,v in customer.items():
-        if not customer[k]:
-            isEnd = False
+    if not check():
+        isEnd = False
+    else:
+        answer = tank
 
-if fl == -1:
-    print(-1)
-else:
-    print(tank)
+print(answer)
 
 # 6 3 15
 # 0 0 1 0 0 0
