@@ -1,4 +1,4 @@
-#17:23 ~
+#17:23 ~ 18:13
 import math
 def solution(progresses, speeds):
     answer = []
