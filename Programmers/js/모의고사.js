@@ -23,6 +23,26 @@ function solution(answers) {
     return answer.filter((num, idx) => result[idx] === maxVal);
 }
 
+
+// function solution(answers) {
+//     const answer = [1, 2, 3];
+
+//     const peoples = [
+//         [1, 2, 3, 4, 5],
+//         [2, 1, 2, 3, 2, 4, 2, 5],
+//         [3, 3, 1, 1, 2, 2, 4, 4, 5, 5],
+//     ];
+
+//     const scores = peoples.map(people => {
+//         return answers.filter((ans, idx) => people[idx % people.length] === ans).length
+//     });
+
+//     return scores.reduce((arr, curr, idx) => (
+//         curr === Math.max(...scores) ? [...arr, idx + 1] : arr
+//     ), []);
+// }
+
+
 // answers	return
 ex1 = [1, 2, 3, 4, 5]	// [1]
 ex2 = [1, 3, 2, 4, 2]	// [1,2,3]
