@@ -104,5 +104,47 @@ str.indexOf('q'); // -1
 !~str.indexOf('q'); // 1
 ```
 
+---
 
+#### 2차원 배열 생성
+
+```javascript
+function create2DArray(rows,columns) {
+  const arr = new Array(rows);
+  for (let i = 0; i < rows; i++) {
+    arr[i] = new Array(columns).fill(0);
+  }
+  return arr;
+}
+
+const arr = create2DArray(5,2);
+```
+
+---
+
+#### 문자열 <=> 숫자
+
+##### 문자열 => 숫자열
+
+- 숫자로 이루어진 문자열에 1을 곱함
+- 숫자로 이루어진 문자열에 `+` 기호 사용
+
+```javascript
+let s = '123'; // String
+s = s*1; // Number
+```
+
+```javascript
+let s = '123' // String
+s = +s; // Number
+```
+
+##### 숫자 => 문자열
+
+- **문자열 + 숫자 = 문자열** 로 자동 형변환
+
+```javascript
+let num = 10; // Number
+num = ''+num; // String
+```
 
