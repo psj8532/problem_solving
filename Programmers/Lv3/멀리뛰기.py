@@ -1,4 +1,4 @@
-# 13:34 ~
+# 13:34 ~ 13:50
 def solution(n):
     if n == 1: return 1
     elif n == 2: return 2
