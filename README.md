@@ -77,6 +77,69 @@ deq.pop()
 deq[0]
 ```
 
+---
+
+### heapq
+
+```python
+import heapq
+```
+
+#### 기존 리스트를 heap으로 변환
+
+```python
+h = [3,1,10]
+heapq.heapify(h)
+print(h)
+# [1, 3, 10]
+```
+
+#### heap에 원소 추가
+
+```python
+h = [3,1,10]
+heapq.heappush(h, 5)
+print(h)
+# [1, 3, 5, 10]
+```
+
+#### heap 최솟값 확인 및 추출
+
+```python
+# 추출
+heapq.heappop(h)
+# 값만 확인
+print(heap[0])
+```
+
+#### 최대힙
+
+```python
+import heapq
+
+s = [3, 1, 7, 5]
+heap = []
+
+for n in s:
+  heapq.heappush(heap, (-n, n))  # (우선 순위, 값)
+
+while heap:
+  print(heapq.heappop(heap)[1])  # index 1
+```
+
+```python
+import heapq
+
+s = [3, 1, 7, 5]
+heap = []
+
+for n in s:
+  heapq.heappush(heap, -n) 
+
+while heap:
+  print(heapq.heappop(heap))  # 뽑아서 -붙여주면 최댓값으로 추출 가능
+```
+
 
 
 ## JavaScript
