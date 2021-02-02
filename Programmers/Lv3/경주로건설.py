@@ -59,7 +59,3 @@ ex6 = [
         [0, 1, 1, 0, 0]
     ]
 print(solution(ex1))
-print(solution(ex2))
-print(solution(ex3))
-print(solution(ex4))
-print(solution(ex6))
