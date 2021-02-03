@@ -1,8 +1,7 @@
 # 15:29 ~ 15:55
 def solution(m, n, puddles):
     dp = [[0] * m for _ in range(n)]
-    dy = [0,1]
-    dx = [1,0]
+    dy, dx = [0,1], [1,0]
     for x, y in puddles:
         dp[y-1][x-1] = -1
     dp[0][0] = 1
