@@ -1,7 +1,8 @@
 # 15:44 ~
 from _collections import deque
 
-N, M, R = map(int,input().split())
+N, M, R = 1, 8, 2
+# N, M, R = map(int,input().split())
 check = [['S']*M for _ in range(N)]
 direction = {
     'N': [-1,0],
@@ -10,7 +11,14 @@ direction = {
     'W': [0,-1],
 }
 Y, X = 0, 1
-domino = [list(map(int,input().split())) for _ in range(N)]
+# domino = [list(map(int,input().split())) for _ in range(N)]
+domino = [
+    # [2,5,1,2,1],
+    # [1,1,2,1,1],
+    # [4,1,1,4,3],
+    # [5,2,4,3,2]
+    [1,6,3,2,1,1,4,2]
+]
 answer = 0
 for _ in range(R):
     ay, ax, ad = input().split()
@@ -30,7 +38,7 @@ for _ in range(R):
                 if check[ny][nx] == 'S':
                     cand.append([ny, nx, domino[ny][nx]])
                     answer += 1
-                check[ny][nx] = 'F'
+                    check[ny][nx] = 'F'
             move += 1
     check[dy][dx] = 'S'
 
