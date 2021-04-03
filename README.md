@@ -172,7 +172,7 @@ str.indexOf('q'); // -1
 #### 2차원 배열 생성
 
 ```javascript
-function create2DArray(rows,columns) {
+const create2DArray = (rows,columns) => {
   const arr = new Array(rows);
   for (let i = 0; i < rows; i++) {
     arr[i] = new Array(columns).fill(0);
