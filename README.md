@@ -146,9 +146,9 @@ while heap:
 
 ### 비트를 이용한 연산
 
-#### ~~
+##### 소숫점 버림
 
-- 소숫점 버림
+> ~~
 
 ```javascript
 n = 10.12;
@@ -156,9 +156,11 @@ console.log(~~n);
 // 10
 ```
 
-#### ~
+##### 인덱스 요소 검사
 
-- 인덱스 요소 검사
+> ~ 
+>
+> 없으면 -1이 반환되고, -1의 ~은 0임을 이용
 
 ```javascript
 str = 'abcd';
@@ -169,7 +171,7 @@ str.indexOf('q'); // -1
 
 ---
 
-#### 2차원 배열 생성
+### 2차원 배열 생성
 
 ```javascript
 function create2DArray(rows,columns) {
@@ -185,7 +187,7 @@ const arr = create2DArray(5,2);
 
 ---
 
-#### 문자열 <=> 숫자
+### 문자열 <=> 숫자
 
 ##### 문자열 => 숫자열
 
@@ -209,5 +211,43 @@ s = +s; // Number
 ```javascript
 let num = 10; // Number
 num = ''+num; // String
+```
+
+---
+
+### 알고리즘
+
+##### 조합
+
+```javascript
+const combination = (k, a, cSize, totalSize) => {
+    if (k === cSize) {
+        const temp = a.map(v => v);
+        comb.push(temp);
+        return;
+    }
+    const inComb = new Array(totalSize).fill(false);
+    for (let i = 0; i < k; i++) {
+        inComb[a[i]] = true;
+    }
+    let posi = 0;
+    for (let i = totalSize - 1; i >= 0; i--) {
+        if (inComb[i]) {
+            posi = i + 1;
+            break;
+        }
+    }
+    const c = new Array(cSize).fill(0);
+    let cnt = 0;
+    for (let i = posi; i < totalSize; i++) {
+        if (!inComb[i]) {
+            c[cnt++] = i;
+        }
+    }
+    for (let i = 0; i < cnt; i++) {
+        a[k] = c[i];
+        combination(k + 1, a, cSize, totalSize);
+    }
+};
 ```
 
