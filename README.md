@@ -237,7 +237,7 @@ const combination = (k, a, cSize, totalSize) => {
             break;
         }
     }
-    const c = new Array(cSize).fill(0);
+    const c = new Array(totalSize).fill(0);
     let cnt = 0;
     for (let i = posi; i < totalSize; i++) {
         if (!inComb[i]) {
