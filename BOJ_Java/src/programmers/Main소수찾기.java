@@ -45,7 +45,7 @@ public class Main소수찾기 {
 		return true;
 	}
 	
-	public static int solution(String numbers) {
+	private static int solution(String numbers) {
         int numbersSize = numbers.length();
         
         for (int permSize = 1; permSize <= numbersSize; permSize++) {
