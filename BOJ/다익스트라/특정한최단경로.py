@@ -24,9 +24,11 @@
 # if answer == INF: print(-1)
 # else: print(answer)
 
-def shortest_path():
+def find_path(s, e):
     dist = [INF] * (N + 1)
-    visit = [0] * (N + 1)
+    cnt = 0
+    while cnt < N:
+
     return
 
 N, E = map(int,input().split())
