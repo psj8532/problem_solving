@@ -251,3 +251,24 @@ const combination = (k, a, cSize, totalSize) => {
 };
 ```
 
+
+
+## Java
+
+#### 소수점 반올림
+
+##### 소숫점 n번째 자리에서 반올림
+
+```java
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double num = 10.000501;
+		int n = 3;
+		double e = Math.pow(10.0, n);
+		System.out.println(Math.round(num * e) / e);
+		
+}
+
+// 10.001
+```
+
