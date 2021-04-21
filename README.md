@@ -144,6 +144,38 @@ while heap:
 
 ## JavaScript
 
+### 정렬
+
+> sort()
+
+자바스크립트의 sort() 메서드는 기본적으로 문자의 `유니코드 코드 포인트`를 기준으로 합니다. 숫자를 정렬하기 위해서는 compareFunction을 추가해야 한다.
+
+##### compareFunction(a, b) 
+
+- 리턴 값이 0보다 작으면 a가 b보다 앞에 온다.
+- 0이랑 같으면 아무 변화가 없다.
+- 0보다 크면 b가 a 앞으로 온다.
+
+```javascript
+const numbers = [3, 5, 1, 7];
+const nums = numbers.sort((a, b) => {
+  return a - b; // 오름차순
+});
+console.log(nums);
+// [1, 3, 5, 7]
+```
+
+```javascript
+const numbers = [3, 5, 1, 7];
+const nums = numbers.sort((a, b) => {
+  return b - a; // 내림차순
+});
+console.log(nums);
+// [7, 3, 5, 1]
+```
+
+---
+
 ### 비트를 이용한 연산
 
 ##### 소숫점 버림
