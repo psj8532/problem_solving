@@ -16,4 +16,5 @@ ex1 = [8,12] # 80
 ex2 = [1,1] # 0
 ex3 = [2,7] # 6
 ex4 = [100000000,10000000]
-print(solution(*ex3))
+ex5 = [42, 20]
+print(solution(*ex5))
